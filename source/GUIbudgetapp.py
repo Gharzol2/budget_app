@@ -3,6 +3,7 @@ import tkinter as tk
 import GUIstartpage
 import GUIaccounter
 import GUIaddentry
+import GUIaccountervisualize
 
 
 class GUIBudgetApp(tk.Tk):
@@ -11,17 +12,20 @@ class GUIBudgetApp(tk.Tk):
 
         tk.Tk.__init__(self, *args, **kwargs)
         container = tk.Frame(self)
-        container.pack(side="top", fill="both", expand = True)
+        container.grid(row = 0, column = 0)
+        #container.pack(side="top", fill="both", expand = True)
+
         container.grid_rowconfigure(0, weight=1)
         container.grid_columnconfigure(0, weight=1)
         self.frames={}
 
-        for F in (GUIstartpage.GUIStartPage, GUIaccounter.GUIAccounter, GUIaddentry.GUIAddEntry):
+        for F in (GUIstartpage.GUIStartPage, GUIaccounter.GUIAccounter, GUIaddentry.GUIAddEntry,
+                  GUIaccountervisualize.GUIAccounterVisualize):
             frame = F(container, self)
             self.frames[F] = frame
             frame.grid(row=0, column=0, sticky="nsew")
 
-        self.geometry("1000x800")
+        #self.geometry("1000x800")
 
         self.show_frame(GUIstartpage.GUIStartPage)
 

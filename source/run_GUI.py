@@ -5,7 +5,7 @@ import utilities
 
 from GUIbudgetapp import GUIBudgetApp
 
-utilities.selected_year = 2016
+utilities.selected_year = 2018
 date = datetime.datetime.now()
 
 app = GUIBudgetApp()

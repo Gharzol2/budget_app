@@ -16,6 +16,10 @@ class MonthEntries():
     def month_name(self):
         return self._month_name
 
+    @property
+    def entries(self):
+        return self._entries
+
     @month_number.setter
     def month_number(self, month_number):
         assert(month_number in month_data.keys())
