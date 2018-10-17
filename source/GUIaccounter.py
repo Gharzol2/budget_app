@@ -57,7 +57,7 @@ class GUIAccounter(tk.Frame):
         self.to_visualizer_button.grid(row=3, column=0)
 
         # Button to go back to start
-        self.back_to_start_button = tk.Button(self, text="Back to start pack",
+        self.back_to_start_button = tk.Button(self, text="Back to start page",
                             command= lambda: controller.show_frame(GUIstartpage.GUIStartPage))
         self.back_to_start_button.grid(row=4, column=0)
 
